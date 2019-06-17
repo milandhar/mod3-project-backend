@@ -1,3 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id
+  has_many :breaks
+  attributes :id, :user_name, :phone_number, :default_url, :default_break_time 
 end
