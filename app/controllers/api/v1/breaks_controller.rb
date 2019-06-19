@@ -27,7 +27,7 @@ class Api::V1::BreaksController < ApplicationController
   private
 
   def break_params
-    params.permit(:active, :chosen_url, :chosen_break_time, :user_id)
+    params.permit(:active, :chosen_url, :chosen_break_time, :user_id, :phone_number)
   end
 
 end
