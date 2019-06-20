@@ -18,6 +18,9 @@ class Api::V1::BreaksController < ApplicationController
     @break.update(break_params)
     if @break.save
       render json: @break, status: :accepted
+      if @break.active == false
+        @break.send_message
+      end
     else
       render json: {errors: @break.errors.full_messages }, status: :unprocessible_entity
     end
@@ -27,7 +30,7 @@ class Api::V1::BreaksController < ApplicationController
   private
 
   def break_params
-    params.permit(:active, :chosen_url, :chosen_break_time, :user_id)
+    params.permit(:active, :chosen_url, :chosen_break_time, :user_id, :phone_number)
   end
 
 end
