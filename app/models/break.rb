@@ -22,7 +22,7 @@ class Break < ApplicationRecord
     @client.api.account.messages.create(
       from: '+12406410870',
       to: '+1' + self.phone_number,
-      body: 'Hey there - break is up!'
+      body: "Hey #{self.user.user_name}! Your break is up, we've opened: #{self.chosen_url}"
     )
   end
 
