@@ -16,7 +16,7 @@ class Break < ApplicationRecord
 
   def send_message
     account_sid = 'AC90f8b4c917046d37d6af128295b2fe4d'
-    auth_token = 'cb0191398a42c8c5531bbf4157ac32c1'
+    auth_token = '5bf4a168433390464d25b16105c7be68'
     @client = Twilio::REST::Client.new account_sid, auth_token
 
     @client.api.account.messages.create(
