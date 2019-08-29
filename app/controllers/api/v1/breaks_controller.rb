@@ -13,6 +13,7 @@ class Api::V1::BreaksController < ApplicationController
     end
   end
 
+
   def update
     @break = Break.find(params[:id])
     @break.update(break_params)

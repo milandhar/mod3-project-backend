@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'  
 gem 'rails', '~> 5.2.3'
 gem 'twilio-ruby', '~> 5.24.0'
 # Use postgresql as the database for Active Record
